@@ -14,7 +14,8 @@ const Smurfs = props => {
 
 const mstp = state => {
     return {
-        smurfs: state.smurfs
+        smurfs: state.smurfs,
+        fetching: state.fetchingSmurfs
     }
 }
 

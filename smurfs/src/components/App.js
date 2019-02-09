@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSmurfs } from '../actions'
+import CreateSmurfForm from './createSmurfForm'
 import Smurfs from './Smurfs'
 import './App.css';
 /*
@@ -16,10 +17,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Smurfs />
+        <CreateSmurfForm />
+        {!this.props.fetchingSmurfs ? <Smurfs /> : <div>LOADING...</div>}
       </div>
     );
   }
 }
+const mstp = state => {
+  return {
+    fetching: state.fetchingSmurfs
+  }
+}
 
-export default connect(null, { fetchSmurfs })(App);
+export default connect(mstp, { fetchSmurfs })(App);
