@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reducers';
 
-const store = createStore(
+export const store = createStore(
   reducer,
   applyMiddleware(thunk, logger)
 );

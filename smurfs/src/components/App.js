@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { fetchSmurfs } from '../actions'
 import CreateSmurfForm from './createSmurfForm'
+import UpdateSmurfForm from './updateSmurfForm'
 import Smurfs from './Smurfs'
 import './App.css';
 
@@ -13,8 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CreateSmurfForm />
-        {console.log(this.props.fetchingSmurfs)}
+        {this.props.updatingSmurf ? <div><h2>Editing</h2> <UpdateSmurfForm /></div> : <CreateSmurfForm />}
         {!this.props.fetchingSmurfs ? <Smurfs /> : <div>LOADING...</div>}
       </div>
     );
@@ -22,7 +22,8 @@ class App extends Component {
 }
 const mstp = state => {
   return {
-    fetchingSmurfs: state.fetchingSmurfs
+    fetchingSmurfs: state.fetchingSmurfs,
+    updatingSmurf: state.updatingSmurf
   }
 }
 
