@@ -58,7 +58,7 @@ export default function (state = initialState, action) {
       }
     case EDITING:
       return {
-        ...state, updatingSmurf: true, deletingSmurf: true, error: false, smurf: action.payload
+        ...state, updatingSmurf: !state.updatingSmurf, deletingSmurf: true, error: false, smurf: action.payload
       }
     default:
       return state
