@@ -1,7 +1,5 @@
 import axios from "axios";
 
-import { store } from '../index'
-
 export const GET_SMURF = "GET_SMURF";
 export const ADD_SMURF = "ADD_SMURF";
 export const UPDATE_SMURF = "UPDATE_SMURF";
@@ -27,16 +25,15 @@ export const addSmurf = smurf => dispatch => {
   })
 }
 export const editSmurf = smurf => dispatch => {
-  const id = store.getState().id
   dispatch({ type: LOADING });
-  axios.put(`http://localhost:3333/smurfs/${id}`, smurf).then(res => {
+  axios.put(`http://localhost:3333/smurfs/${smurf.id}`, smurf).then(res => {
     dispatch({ type: UPDATE_SMURF, payload: res.data })
   }).catch(err => {
     dispatch({ type: ERROR, payload: "Cannot edit this smurf" })
   })
 }
-export const editingSmurf = id => dispatch => {
-  dispatch({ type: EDITING, payload: id });
+export const editingSmurf = smurf => dispatch => {
+  dispatch({ type: EDITING, payload: smurf });
 }
 export const deleteSmurf = id => dispatch => {
   dispatch({ type: LOADING });

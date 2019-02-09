@@ -7,7 +7,7 @@
   margin: 1rem auto;
   padding: 1rem;
   width: 50%;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
 .delete {
   cursor: pointer;
   user-select: none;
-  margin: 1rem;
+  margin: 1rem 1rem 0;
   padding: 0.25rem .5rem;
 }
 

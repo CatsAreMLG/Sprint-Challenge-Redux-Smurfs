@@ -8,6 +8,9 @@ class UpdateSmurfForm extends React.Component {
         super(props);
         this.state = { name: "", height: "", age: "" };
     }
+    componentDidMount() {
+        this.setState({ ...this.props.smurf })
+    }
     inputHandler = e => {
         this.setState({ [e.target.name]: e.target.value });
     };
@@ -49,7 +52,13 @@ class UpdateSmurfForm extends React.Component {
     }
 }
 
+const mstp = state => {
+    return {
+        smurf: state.smurf,
+    }
+}
+
 export default connect(
-    null,
+    mstp,
     { editSmurf }
 )(UpdateSmurfForm);
