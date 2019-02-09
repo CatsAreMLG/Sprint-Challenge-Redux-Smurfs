@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Smurfs Redux</h1>
+        <img className="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/The_Smurfs_logo.svg/300px-The_Smurfs_logo.svg.png" alt="smurf logo" />
         {this.props.updatingSmurf ? <div><h2>Editing</h2> <UpdateSmurfForm /></div> : <CreateSmurfForm />}
         {!this.props.fetchingSmurfs
           ?
