@@ -45,16 +45,28 @@ export default function (state = initialState, action) {
         deletingSmurf: false,
       }
     case UPDATE_SMURF:
-      return state
+      return {
+        ...state, smurfs: action.payload, error: false, fetchingSmurfs: false,
+        updatingSmurf: true,
+        deletingSmurf: false,
+      }
     case DELETE_SMURF:
-      return state
+      return {
+        ...state, smurfs: action.payload, error: false, fetchingSmurfs: false,
+        updatingSmurf: false,
+        deletingSmurf: true,
+      }
     case ERROR:
       return {
-        ...state, smurfs: [], fetchingSmurfs: false, error: action.payload
+        ...state, smurfs: [], fetchingSmurfs: false, error: action.payload,
+        updatingSmurf: false,
+        deletingSmurf: true,
       }
     case LOADING:
       return {
         ...state, smurfs: [], fetchingSmurfs: true,
+        updatingSmurf: false,
+        deletingSmurf: true,
       }
     default:
       return state

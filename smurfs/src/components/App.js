@@ -21,7 +21,6 @@ class App extends Component {
   }
 }
 const mstp = state => {
-  console.log(state)
   return {
     fetchingSmurfs: state.fetchingSmurfs
   }
