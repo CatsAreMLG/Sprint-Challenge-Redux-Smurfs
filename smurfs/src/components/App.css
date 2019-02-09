@@ -13,6 +13,7 @@ body {
 }
 
 .smurf {
+  background: hsla(219, 45%, 44%, 0.5);
   margin: 1rem auto;
   padding: 1rem;
   width: 50%;
@@ -21,6 +22,11 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  transition: 150ms transform ease-in-out;
+}
+
+.smurf:hover {
+  transform: scale(1.075);
 }
 
 .smurf_text {
@@ -36,7 +42,7 @@ body {
 }
 
 .edit {
-  border: 1px solid rgb(112, 157, 226);
+  border: 1px solid #3E61A4;
 }
 
 .delete {
