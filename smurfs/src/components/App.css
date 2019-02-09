@@ -54,3 +54,20 @@ button {
   cursor: pointer;
   user-select: none;
 }
+
+@media (max-width: 720px) {
+  form {
+    margin: 1rem 10%;
+    flex-direction: column;
+  }
+
+  input {
+    margin: 0.5rem 0;
+    width: 70%;
+  }
+
+  button {
+    margin: 0.5rem 0;
+    width: 10rem;
+  }
+}
