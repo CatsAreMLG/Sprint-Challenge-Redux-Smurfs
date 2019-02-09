@@ -1,28 +1,50 @@
 .App {
+  padding-top: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.smurf {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 50%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.smurf_text {
+  width: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.edit,
+.delete {
+  cursor: pointer;
+  user-select: none;
+  margin: 1rem;
+  padding: 0.25rem .5rem;
 }
 
-.App-intro {
-  font-size: large;
+.edit {
+  border: 1px solid rgb(112, 157, 226);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.delete {
+  border: 1px solid rgb(255, 77, 77);
+}
+
+form {}
+
+input,
+button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  background: white;
 }

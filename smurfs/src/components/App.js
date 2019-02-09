@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Smurfs Redux</h1>
         {this.props.updatingSmurf ? <div><h2>Editing</h2> <UpdateSmurfForm /></div> : <CreateSmurfForm />}
         {!this.props.fetchingSmurfs ? <Smurfs /> : <div>LOADING...</div>}
       </div>
