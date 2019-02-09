@@ -18,14 +18,16 @@ class App extends Component {
     return (
       <div className="App">
         <CreateSmurfForm />
+        {console.log(this.props.fetchingSmurfs)}
         {!this.props.fetchingSmurfs ? <Smurfs /> : <div>LOADING...</div>}
       </div>
     );
   }
 }
 const mstp = state => {
+  console.log(state)
   return {
-    fetching: state.fetchingSmurfs
+    fetchingSmurfs: state.fetchingSmurfs
   }
 }
 
