@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 const Smurf = props => {
     return (
         <div className="smurf">
-            {props.name}
-        </div>
+            <div>{props.name}</div><div>{props.age}</div><div>{props.height}</div>
+        </div >
     );
 }
 
