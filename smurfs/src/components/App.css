@@ -1,28 +1,85 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+body {
+  background: #121316;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.App {
+  padding-top: 1rem;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+.logo {
+  margin: 1rem 1rem 2rem;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.smurf {
+  background: hsla(219, 45%, 44%, 0.5);
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: 150ms transform ease-in-out;
+}
+
+.smurf:hover {
+  transform: scale(1.075);
+}
+
+.smurf_text {
+  width: 100%;
+}
+
+.edit,
+.delete {
+  cursor: pointer;
+  user-select: none;
+  margin: 1rem 1rem 0;
+  padding: 0.25rem .5rem;
+}
+
+.edit {
+  border: 1px solid #3E61A4;
+}
+
+.delete {
+  border: 1px solid rgb(255, 77, 77);
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+input,
+button {
+  color: white;
+  background: rgba(0, 0, 0, 0);
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 720px) {
+  form {
+    margin: 1rem 10%;
+    flex-direction: column;
+  }
+
+  input {
+    margin: 0.5rem 0;
+    width: 70%;
+  }
+
+  button {
+    margin: 0.5rem 0;
+    width: 10rem;
+  }
 }
